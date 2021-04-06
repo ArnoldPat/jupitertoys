@@ -16,12 +16,20 @@ public class TestCase4 {
 	WebDriver driver = new ChromeDriver();
 
 	public void submitContact() {
+		
 		// Prime the web browser and Contact Form page for testing.
 		driver.get("https://jupiter.cloud.planittesting.com/#/");
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Shop")));
 		WebElement shop = driver.findElement(By.linkText("Shop"));
 		shop.click();
+		
+		//Purchase Funny Cow(qty:2) and Fluffy Bunny(qty: 1)
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[@id='product-6']//p/a")));
+		driver.findElement(By.xpath("//li[@id='product-6']//p/a")).click();
+		driver.findElement(By.xpath("//li[@id='product-6']//p/a")).click();
+		
+		driver.findElement(By.xpath("//li[@id='product-4']//p/a")).click();
 	}
 
 	
