@@ -41,6 +41,7 @@ public class TestCase2 {
 		validateMandatory();
 	}
 	
+	@Test
 	private void validateMandatory() {
 		assertTrue("Verification succesful. Form submitted successfully.", driver.findElement(By.xpath("//strong[contains(text(),'Thanks')]")).isEnabled());
 		System.out.println("Passed");
