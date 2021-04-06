@@ -1,5 +1,8 @@
 **Technical Assessment – Automation**
 
+**Deliverable/s:**
+Execute the following test cases using testing tool and framework of choice. Validate results at the end of each execution as specified per case.
+
 **Test Cases:**
 
 Test case 1:
