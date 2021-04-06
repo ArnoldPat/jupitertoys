@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-04-06T14:55:05 AEST" name="Default suite" finished-at="2021-04-06T14:55:12 AEST" duration-ms="7118">
+    <groups>
+    </groups>
+    <test started-at="2021-04-06T14:55:05 AEST" name="Default test" finished-at="2021-04-06T14:55:12 AEST" duration-ms="7118">
+      <class name="jupiter.test.Helloworld">
+        <test-method signature="testHelloWorld()[pri:0, instance:jupiter.test.Helloworld@309e345f]" started-at="2021-04-06T14:55:05 AEST" name="testHelloWorld" finished-at="2021-04-06T14:55:12 AEST" duration-ms="7092" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHelloWorld -->
+      </class> <!-- jupiter.test.Helloworld -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
