@@ -72,3 +72,6 @@ Test case 4:
 **Execution Notes:**
 - Invoke CLI with administrator privilege
 - From root directory(POM.xml location) run: mvn install
+
+**Miscellaneous Notes**:
+- Purge from repository after assessment
