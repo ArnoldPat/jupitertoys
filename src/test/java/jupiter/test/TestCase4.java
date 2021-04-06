@@ -30,7 +30,19 @@ public class TestCase4 {
 		driver.findElement(By.xpath("//li[@id='product-6']//p/a")).click();
 		
 		driver.findElement(By.xpath("//li[@id='product-4']//p/a")).click();
+		
+		//Open the cart menu
+		WebElement cart = driver.findElement(By.linkText("Cart"));
+		cart.click();
+		
+		//Validate the cart items
+		validateCart();
+		
 	}
 
+	public void validateCart() {
+		assertTrue("Funny Cow is in the cart", driver.findElement(By.xpath("//input[@value='2']")).isDisplayed());
+		assertTrue("Fluffy Bunny is in the cart", driver.findElement(By.xpath("//input[@value='1']")).isDisplayed());
+	}
 	
 }
