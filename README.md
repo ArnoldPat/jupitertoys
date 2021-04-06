@@ -68,3 +68,7 @@ Test case 4:
 - org.openqa.selenium.support.ui.WebDriverWait		  - For delay handling
 - org.testng.Assert					- Test case verification tool
 - org.testng.annotations.Test				- Test execution flow manager
+
+**Execution Notes:**
+- Invoke CLI with administrator privilege
+- From root directory(POM.xml location) run: mvn install
