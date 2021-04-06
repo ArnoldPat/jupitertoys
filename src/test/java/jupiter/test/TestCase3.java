@@ -41,6 +41,7 @@ public class TestCase3 {
 		validateMandatory();
 	}
 	
+	@Test
 	private void validateMandatory() {
 		assertTrue("Verification failed. Invalid characters did not return error.", driver.findElement(By.xpath("//strong[contains(text(),'Thanks')]")).isEnabled());
 	}
