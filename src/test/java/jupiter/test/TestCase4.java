@@ -40,6 +40,7 @@ public class TestCase4 {
 		
 	}
 
+	@Test
 	public void validateCart() {
 		assertTrue("Funny Cow is in the cart", driver.findElement(By.xpath("//input[@value='2']")).isDisplayed());
 		assertTrue("Fluffy Bunny is in the cart", driver.findElement(By.xpath("//input[@value='1']")).isDisplayed());
