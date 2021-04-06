@@ -17,7 +17,7 @@ public class TestCase1 {
 	
 	public void submitContact() {
 	
-		// Instantiate the browser path, prime the Contact Form page for testing.
+		// Prime the web browser and Contact Form page for testing.
 		driver.get("https://jupiter.cloud.planittesting.com/#/");
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Contact")));
@@ -34,7 +34,7 @@ public class TestCase1 {
 		validateEmpty();
 		
 		
-		// TestCase1b: Populate Mandatory fields and validate on submit
+		// TestCase1b: Populate Mandatory fields and validate
 		WebElement fnametxt = driver.findElement(By.xpath("//input[@id='forename']"));
 		WebElement emailtxt = driver.findElement(By.xpath("//input[@id='email']"));
 		WebElement msgtxt = driver.findElement(By.xpath("//input[@id='message']"));
@@ -42,26 +42,23 @@ public class TestCase1 {
 		fnametxt.sendKeys("John");
 		emailtxt.sendKeys("john.dee@monad.com");
 		msgtxt.sendKeys("Lorem Ipsum");
-		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[.='Submit']")));
-		submit.click();
-		
-		// Check if successful submission message is displayed.
+			
+		// Check if error messages .
 		validateMandatory();
 	}
 
 
 	@Test
 	private void validateEmpty() {
-		assertTrue("Forename is empty.", driver.findElement(By.xpath("//input[@id='forename']")).isEnabled());
-		assertTrue("Email is empty.", driver.findElement(By.xpath("//input[@id='email']")).isEnabled());
-		assertTrue("Message Area is empty.", driver.findElement(By.xpath("//textarea[@id='message']")).isEnabled());
-		System.out.println("Fail");
+		assertTrue("Verification failed. Forename error-inline text is visible.", driver.findElement(By.xpath("//input[@id='forename']")).isEnabled());
+		assertTrue("Verification failed. Email error-inline text is visible.", driver.findElement(By.xpath("//input[@id='email']")).isEnabled());
+		assertTrue("Verification failed. Message error-inline text is visible.", driver.findElement(By.xpath("//textarea[@id='message']")).isEnabled());
 	}
 
 	@Test
 	private void validateMandatory() {
-		assertTrue("Form submitted successfully.", driver.findElement(By.xpath("//strong[text()='We welcome your feedback' ]")).isEnabled());
-		System.out.println("Passed");
+		assertTrue("Verification successful. Forename error-inline text is not visible.", driver.findElement(By.xpath("//input[@id='forename']")).isEnabled());
+		assertTrue("Verification successful. Email error-inline text is not visible.", driver.findElement(By.xpath("//input[@id='email']")).isEnabled());
+		assertTrue("Verification successful. Message error-inline text is not visible.", driver.findElement(By.xpath("//textarea[@id='message']")).isEnabled());
 	}
 }
