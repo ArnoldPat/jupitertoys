@@ -63,3 +63,5 @@ Test case 4:
 - org.openqa.selenium.WebElement		                - Interface for webpage elements
 - org.openqa.selenium.support.ui.ExpectedConditions	- For delay handling
 - org.openqa.selenium.support.ui.WebDriverWait		  - For delay handling
+- org.testng.Assert					- Test case verification tool
+- org.testng.annotations.Test				- Test execution flow manager
